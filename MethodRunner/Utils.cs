@@ -37,7 +37,7 @@ public static partial class Utils
         {
             IEnumerable<int> i => $"Returned value: [green]{{{string.Join(", ", i)}}}[/]",
             long i => $"Returned value: [green]{i:N0}[/]",
-            null => "[red]Null value returned[/]",
+            null => "\n[gray]Void function[/]",
             _ => $"Returned value: [green]{result}[/]"
         };
 

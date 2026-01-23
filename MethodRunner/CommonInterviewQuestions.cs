@@ -1,4 +1,6 @@
-﻿namespace IrishJohnDeRoxas.MethodRunner;
+﻿using Spectre.Console;
+
+namespace IrishJohnDeRoxas.MethodRunner;
 
 internal class CommonInterviewQuestions
 {
@@ -72,5 +74,30 @@ internal class CommonInterviewQuestions
         }
 
         return second;
+    }
+
+    public static void Fizzbuzz()
+    {
+        for (int i = 1; i <= 100; i++)
+        {
+            string msg;
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                msg = "FizzBuzz";
+            }
+            else if (i % 3 == 0)
+            {
+                msg = "Fizz";
+            }
+            else if (i % 5 == 0)
+            {
+                msg = "Buzz";
+            }
+            else
+            {
+                msg = i.ToString();
+            }
+            AnsiConsole.WriteLine(msg);
+        }
     }
 }
